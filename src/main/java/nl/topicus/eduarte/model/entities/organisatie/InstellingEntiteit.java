@@ -15,8 +15,8 @@
  */
 package nl.topicus.eduarte.model.entities.organisatie;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
 
 import nl.topicus.eduarte.model.entities.Entiteit;
 

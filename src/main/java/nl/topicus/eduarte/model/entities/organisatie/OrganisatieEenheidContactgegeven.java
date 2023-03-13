@@ -15,11 +15,11 @@
  */
 package nl.topicus.eduarte.model.entities.organisatie;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -31,7 +31,7 @@ import nl.topicus.eduarte.model.entities.adres.SoortContactgegeven;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(name = "OrganisatieEenheidCG")
+@jakarta.persistence.Table(name = "OrganisatieEenheidCG")
 public class OrganisatieEenheidContactgegeven extends InstellingEntiteit implements IContactgegevenEntiteit {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "organisatieEenheid", nullable = false)

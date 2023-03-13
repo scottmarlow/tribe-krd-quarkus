@@ -17,8 +17,8 @@ package nl.topicus.eduarte.model.entities.landelijk;
 
 import java.util.Calendar;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Cache;

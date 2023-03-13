@@ -18,11 +18,11 @@ package nl.topicus.eduarte.model.entities.bijlage;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Cache;
@@ -37,7 +37,7 @@ import nl.topicus.eduarte.model.entities.rapportage.DocumentTemplateRecht;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"code",
+@jakarta.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"code",
 "organisatie"})})
 public class DocumentCategorie extends CodeNaamActiefInstellingEntiteit
 {

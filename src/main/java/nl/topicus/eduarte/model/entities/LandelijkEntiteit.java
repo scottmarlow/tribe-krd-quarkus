@@ -15,7 +15,7 @@
  */
 package nl.topicus.eduarte.model.entities;
 
-import javax.persistence.MappedSuperclass;
+import jakarta.persistence.MappedSuperclass;
 
 @MappedSuperclass
 public class LandelijkEntiteit extends Entiteit

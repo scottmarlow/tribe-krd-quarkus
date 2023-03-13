@@ -15,9 +15,9 @@
  */
 package nl.topicus.eduarte.model.entities.inschrijving;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -30,7 +30,7 @@ import nl.topicus.eduarte.model.entities.organisatie.InstellingEntiteit;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "naam", "organisatie" }) })
+@jakarta.persistence.Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "naam", "organisatie" }) })
 public class Schooladvies extends InstellingEntiteit {
 	@Column(nullable = false, length = 100)
 	private String naam;

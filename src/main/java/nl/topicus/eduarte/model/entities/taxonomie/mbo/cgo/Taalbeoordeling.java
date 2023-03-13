@@ -15,9 +15,9 @@
  */
 package nl.topicus.eduarte.model.entities.taxonomie.mbo.cgo;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 import nl.topicus.eduarte.model.entities.personen.Deelnemer;
 import nl.topicus.eduarte.model.entities.personen.Medewerker;

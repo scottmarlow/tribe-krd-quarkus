@@ -18,14 +18,14 @@ package nl.topicus.eduarte.model.entities.dbs.testen;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderBy;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OrderBy;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -36,7 +36,7 @@ import nl.topicus.eduarte.model.entities.participatie.AfspraakType;
 
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"naam",
+@jakarta.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"naam",
 "organisatie"})})
 public class TestDefinitie extends InstellingEntiteit
 {

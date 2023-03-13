@@ -15,11 +15,11 @@
  */
 package nl.topicus.eduarte.model.entities.taxonomie.mbo.cgo;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Table;
@@ -34,7 +34,7 @@ import nl.topicus.eduarte.model.entities.organisatie.InstellingEntiteit;
 @Entity
 @BatchSize(size = 1000)
 @Table(appliesTo = "CompetentieNiveau")
-@javax.persistence.Table(uniqueConstraints = @UniqueConstraint(columnNames = { "leerpunt", "niveauVerzameling" }))
+@jakarta.persistence.Table(uniqueConstraints = @UniqueConstraint(columnNames = { "leerpunt", "niveauVerzameling" }))
 public class CompetentieNiveau extends InstellingEntiteit {
 	@ManyToOne(optional = true, fetch = FetchType.EAGER)
 	@JoinColumn(name = "score", nullable = true)

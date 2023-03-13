@@ -18,16 +18,16 @@ package nl.topicus.eduarte.model.entities.resultaatstructuur;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Cache;
@@ -45,7 +45,7 @@ import nl.topicus.eduarte.model.entities.personen.Medewerker;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Inrichting")
-@javax.persistence.Table(uniqueConstraints = {
+@jakarta.persistence.Table(uniqueConstraints = {
 		@UniqueConstraint(columnNames = { "code", "organisatie", "cohort", "onderwijsproduct" }) })
 public class Resultaatstructuur extends CodeNaamActiefInstellingEntiteit {
 	public static final String RES_SUMMATIEF = "RES_SUMMATIEF";

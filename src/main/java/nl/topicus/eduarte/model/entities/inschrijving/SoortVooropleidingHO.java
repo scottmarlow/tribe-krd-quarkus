@@ -15,9 +15,9 @@
  */
 package nl.topicus.eduarte.model.entities.inschrijving;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -29,7 +29,7 @@ import nl.topicus.eduarte.model.entities.codenaamactief.ICodeNaamActiefEntiteit;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"code"})})
+@jakarta.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"code"})})
 public class SoortVooropleidingHO extends LandelijkEntiteit implements ICodeNaamActiefEntiteit
 {
 	@Column(length = 10, nullable = false)

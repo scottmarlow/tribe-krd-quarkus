@@ -15,11 +15,11 @@
  */
 package nl.topicus.eduarte.model.entities.onderwijsproduct;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -34,7 +34,7 @@ import nl.topicus.eduarte.model.entities.taxonomie.TaxonomieElement;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"taxonomieElement",
+@jakarta.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"taxonomieElement",
 	"onderwijsproduct"})})
 public class OnderwijsproductTaxonomie extends InstellingEntiteit
 {

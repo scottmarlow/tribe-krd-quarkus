@@ -15,8 +15,8 @@
  */
 package nl.topicus.eduarte.model.entities.settings;
 
-import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Entity;
+import jakarta.persistence.DiscriminatorColumn;
+import jakarta.persistence.Entity;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;

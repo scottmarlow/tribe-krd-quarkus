@@ -15,8 +15,8 @@
  */
 package nl.topicus.eduarte.model.entities.personen;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -26,7 +26,7 @@ import nl.topicus.eduarte.model.entities.organisatie.InstellingEntiteit;
 
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(name = "ExtOrgContPersRol")
+@jakarta.persistence.Table(name = "ExtOrgContPersRol")
 @IsViewWhenOnNoise
 public class ExterneOrganisatieContactPersoonRol extends InstellingEntiteit {
 	@Column(length = 120, nullable = false)

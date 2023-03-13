@@ -20,7 +20,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Embeddable;
+import jakarta.persistence.Embeddable;
 
 import nl.topicus.eduarte.model.duo.bron.vo.waardelijsten.CumiCategorie;
 import nl.topicus.eduarte.model.duo.bron.vo.waardelijsten.CumiRatio;

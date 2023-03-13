@@ -15,11 +15,11 @@
  */
 package nl.topicus.eduarte.model.entities.vrijevelden;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -28,7 +28,7 @@ import nl.topicus.eduarte.model.entities.organisatie.InstellingEntiteit;
 
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(name = "VrijVeldKeuzeOptie")
+@jakarta.persistence.Table(name = "VrijVeldKeuzeOptie")
 public class VrijVeldKeuzeOptie extends InstellingEntiteit {
 	@Column(nullable = false)
 	private String naam;

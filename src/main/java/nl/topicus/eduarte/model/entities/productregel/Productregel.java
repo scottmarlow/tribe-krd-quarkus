@@ -18,15 +18,15 @@ package nl.topicus.eduarte.model.entities.productregel;
 import java.math.BigDecimal;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Cache;
@@ -51,7 +51,7 @@ import nl.topicus.eduarte.model.entities.taxonomie.Verbintenisgebied;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(uniqueConstraints = {
+@jakarta.persistence.Table(uniqueConstraints = {
 		@UniqueConstraint(columnNames = { "afkorting", "opleiding", "verbintenisgebied", "cohort" }),
 		@UniqueConstraint(columnNames = { "volgnummer", "soortProductregel", "opleiding", "verbintenisgebied",
 		"cohort" }) })

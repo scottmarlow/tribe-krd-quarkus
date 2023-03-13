@@ -15,13 +15,13 @@
  */
 package nl.topicus.eduarte.model.entities.personen;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -34,7 +34,7 @@ import nl.topicus.eduarte.model.entities.organisatie.OrganisatieEenheid;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(name = "OrgEhdContactPersoon")
+@jakarta.persistence.Table(name = "OrgEhdContactPersoon")
 public class OrganisatieEenheidContactPersoon extends BeginEinddatumInstellingEntiteit {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "organisatieEenheid", nullable = false)

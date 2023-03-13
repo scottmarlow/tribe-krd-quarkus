@@ -15,7 +15,7 @@
  */
 package nl.topicus.eduarte.model.entities.hogeronderwijs;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -24,7 +24,7 @@ import nl.topicus.eduarte.model.entities.codenaamactief.CodeNaamActiefLandelijkO
 
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"code",
+@jakarta.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"code",
 	"organisatie"})})
 public class Fase extends CodeNaamActiefLandelijkOfInstellingEntiteit
 {

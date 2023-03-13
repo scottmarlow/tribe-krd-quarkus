@@ -15,8 +15,8 @@
  */
 package nl.topicus.eduarte.model.entities;
 
-import javax.persistence.Column;
-import javax.persistence.MappedSuperclass;
+import jakarta.persistence.Column;
+import jakarta.persistence.MappedSuperclass;
 
 /**
  * Entiteit met een naam. B.V. een organisatie of een groep. Het is niet de bedoeling dat

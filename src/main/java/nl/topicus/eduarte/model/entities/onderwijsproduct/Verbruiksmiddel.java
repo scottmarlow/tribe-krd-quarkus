@@ -15,8 +15,8 @@
  */
 package nl.topicus.eduarte.model.entities.onderwijsproduct;
 
-import javax.persistence.Entity;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Entity;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -29,7 +29,7 @@ import nl.topicus.eduarte.model.entities.codenaamactief.CodeNaamActiefInstelling
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"code",
+@jakarta.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"code",
 	"organisatie"})})
 public class Verbruiksmiddel extends CodeNaamActiefInstellingEntiteit
 {

@@ -18,13 +18,13 @@ package nl.topicus.eduarte.model.entities.curriculum;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OrderBy;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OrderBy;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -37,7 +37,7 @@ import nl.topicus.eduarte.model.entities.organisatie.OrganisatieEenheid;
 
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"opleiding",
+@jakarta.persistence.Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"opleiding",
 		"cohort", "organisatieEenheid", "locatie"})})
 public class Curriculum extends InstellingEntiteit
 {

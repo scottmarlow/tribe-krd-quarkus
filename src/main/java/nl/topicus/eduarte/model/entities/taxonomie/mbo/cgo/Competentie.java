@@ -18,10 +18,10 @@ package nl.topicus.eduarte.model.entities.taxonomie.mbo.cgo;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -34,7 +34,7 @@ import nl.topicus.eduarte.model.entities.LandelijkEntiteit;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Landelijk")
-@javax.persistence.Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "code" }) })
+@jakarta.persistence.Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "code" }) })
 public class Competentie extends LandelijkEntiteit implements Comparable<Competentie> {
 	/** de titel van de competentie. */
 	@Column(length = 128, nullable = false)

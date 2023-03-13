@@ -15,8 +15,8 @@
  */
 package nl.topicus.eduarte.model.entities.organisatie;
 
-import javax.persistence.Entity;
-import javax.persistence.UniqueConstraint;
+import jakarta.persistence.Entity;
+import jakarta.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -28,7 +28,7 @@ import nl.topicus.eduarte.model.entities.codenaamactief.CodeNaamActiefInstelling
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-@javax.persistence.Table(name = "SoortOrgEhd", uniqueConstraints = {
+@jakarta.persistence.Table(name = "SoortOrgEhd", uniqueConstraints = {
 		@UniqueConstraint(columnNames = { "code", "organisatie" }) })
 @IsViewWhenOnNoise
 public class SoortOrganisatieEenheid extends CodeNaamActiefInstellingEntiteit {

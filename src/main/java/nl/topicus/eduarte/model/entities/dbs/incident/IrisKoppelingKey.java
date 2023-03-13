@@ -15,9 +15,9 @@
  */
 package nl.topicus.eduarte.model.entities.dbs.incident;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Lob;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Lob;
 
 import nl.topicus.eduarte.model.entities.organisatie.InstellingEntiteit;
 

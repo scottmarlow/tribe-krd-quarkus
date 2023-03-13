@@ -17,12 +17,12 @@ package nl.topicus.eduarte.model.entities.examen;
 
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -36,7 +36,7 @@ import nl.topicus.eduarte.model.entities.organisatie.LandelijkOfInstellingEntite
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Landelijk")
-@javax.persistence.Table(name = "ToegExamenstatusOvergang")
+@jakarta.persistence.Table(name = "ToegExamenstatusOvergang")
 public class ToegestaneExamenstatusOvergang extends LandelijkOfInstellingEntiteit {
 	/**
 	 * Volgnummer om de statusovergangen in een logische volgorde op het scherm te

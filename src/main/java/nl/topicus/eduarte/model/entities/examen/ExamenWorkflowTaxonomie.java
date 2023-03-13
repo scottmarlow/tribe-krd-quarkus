@@ -15,10 +15,10 @@
  */
 package nl.topicus.eduarte.model.entities.examen;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
@@ -33,7 +33,7 @@ import nl.topicus.eduarte.model.entities.taxonomie.Taxonomie;
  */
 @Entity()
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Landelijk")
-@javax.persistence.Table(name = "ExamenWorkflowTax")
+@jakarta.persistence.Table(name = "ExamenWorkflowTax")
 public class ExamenWorkflowTaxonomie extends LandelijkOfInstellingEntiteit {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(nullable = false, name = "examenWorkflow")

@@ -15,8 +15,8 @@
  */
 package nl.topicus.eduarte.model.entities.settings;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class DebiteurNummerConfiguration {

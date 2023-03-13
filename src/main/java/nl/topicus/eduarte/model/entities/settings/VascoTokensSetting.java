@@ -15,8 +15,8 @@
  */
 package nl.topicus.eduarte.model.entities.settings;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
