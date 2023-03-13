@@ -34,8 +34,7 @@ import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.ForeignKey;
-import org.hibernate.annotations.Sort;
-import org.hibernate.annotations.SortType;
+import org.hibernate.annotations.SortNatural;
 
 import nl.topicus.eduarte.model.entities.bijlage.Bijlage;
 import nl.topicus.eduarte.model.entities.bijlage.IBijlageKoppelEntiteit;
@@ -76,7 +75,7 @@ implements ZorgvierkantObject, IBijlageKoppelEntiteit<TestBijlage> {
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "test")
 	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Instelling")
-	@Sort(type = SortType.NATURAL)
+	@SortNatural
 	private SortedSet<Veldwaarde> veldwaarden = new TreeSet<>();
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "test")

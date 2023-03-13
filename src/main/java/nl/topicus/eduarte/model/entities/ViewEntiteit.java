@@ -21,7 +21,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MappedSuperclass;
 
-import org.hibernate.annotations.AccessType;
+import org.hibernate.annotations.AttributeAccessor;
 import org.hibernate.annotations.Immutable;
 
 import nl.topicus.eduarte.model.entities.organisatie.IOrganisatieEntiteit;
@@ -37,7 +37,7 @@ import nl.topicus.eduarte.model.entities.organisatie.Instelling;
 public abstract class ViewEntiteit implements IOrganisatieEntiteit
 {
 	@Id
-	@AccessType("property")
+	@AttributeAccessor("property")
 	private String id;
 
 	/**
