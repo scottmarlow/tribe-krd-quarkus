@@ -48,4 +48,432 @@
         </properties>
 
     </persistence-unit>
+    
+    <persistence-unit name="mainPU1">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <!-- intentionally using worse case so that we can optimise for this -->
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <!-- these to test on H2 - not nice as it includes H2 boot in the tests -->
+            <!--
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+            -->
+
+            <!-- These to test on PostgreSQL -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <!-- First run only : use create , then flip to validate to be close to the main use case -->
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+            <!-- workaround https://hibernate.atlassian.net/browse/HHH-16276 deployment failure -->
+            <!-- <property name="hibernate.jpa.compliance.orderby" value="false"/> -->
+
+        </properties>
+
+    </persistence-unit>
+<!--
+   <persistence-unit name="mainPU2">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+  
+            
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+        </properties>
+
+    </persistence-unit>
+   <persistence-unit name="mainPU3">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+        </properties>
+
+    </persistence-unit>
+   <persistence-unit name="mainPU4">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+        </properties>
+
+    </persistence-unit>
+   <persistence-unit name="mainPU5">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+        </properties>
+
+    </persistence-unit>
+   <persistence-unit name="mainPU6">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+        </properties>
+
+    </persistence-unit>
+   <persistence-unit name="mainPU7">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+
+        </properties>
+
+    </persistence-unit>
+    -->
+   <persistence-unit name="mainPU8">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+        </properties>
+
+    </persistence-unit>
+   <persistence-unit name="mainPU9">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+        </properties>
+
+    </persistence-unit>
+   <persistence-unit name="mainPU10">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+ 
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+         </properties>
+
+    </persistence-unit>
+
+   <persistence-unit name="mainPU11">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+
+        </properties>
+
+    </persistence-unit>
+   <persistence-unit name="mainPU12">
+
+        <description>Hibernate test case template Persistence Unit</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+        <properties>
+
+            <property name="hibernate.archive.autodetection" value="class, hbm"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.username" value="sa"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+            <property name="hibernate.connection.url" value="jdbc:postgresql:hibernate_orm_test"/>
+            <property name="hibernate.connection.username" value="hibernate_orm_test"/>
+            <property name="hibernate.connection.password" value="hibernate_orm_test"/>
+
+            <property name="hibernate.connection.pool_size" value="2"/>
+
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="none"/>
+
+            <property name="jakarta.persistence.validation.mode" value="NONE"/>
+            
+            <property name="hibernate.ejb.cyyfgfile" value="custom-hibernate.cfg.xml"/>
+
+
+        </properties>
+
+    </persistence-unit>
+
+
 </persistence>
